@@ -1,0 +1,15 @@
+<img [ngClass]="{'loaded': isLoaded}" src="assets/images/birdchain.png" alt="Senato" />
+<form *ngIf="!isPhoneNumberSubmitted" [ngClass]="{'loaded': isLoaded}" [formGroup]="phoneNumberForm" (ngSubmit)="submitPhoneNumber()">
+    <!--<span class="label">Phone number</span>
+    <ion-select formControlName="country">
+        <ion-option *ngFor="let countryCode of countriesKeys" value="{{countryCode}}">{{countries[countryCode]}}</ion-option>
+    </ion-select>
+    <ion-input type="tel" formControlName="phoneNumber"></ion-input>-->
+    <button class="confirm" [ngClass]="{'is-active': phoneNumberForm.get('phoneNumber').value.length > 3}">Continue</button>
+</form>
+<form *ngIf="isPhoneNumberSubmitted" [ngClass]="{'loaded': isLoaded}" [formGroup]="codeForm">
+    <span class="label">Verification code</span>
+    <span class="caption">Type verification code we sent you</span>
+    <ion-input formControlName="code"></ion-input>
+    <button class="confirm" [ngClass]="{'is-active': codeForm.get('code').value.length > 3}" (click)="submitCode()">Confirm</button>
+</form>

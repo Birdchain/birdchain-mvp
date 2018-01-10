@@ -1,0 +1,118 @@
+app-layout {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    ion-header {
+        position: relative;
+
+        &.wallet {
+            background-color: #FFCFBF;
+
+            .toolbar-background-md {
+                background-color: transparent;
+            }
+
+            .segment-md .segment-button {
+                color: color($colors, white, base);
+            }
+
+            .coin-divider {
+                color: color($colors, primary, base);
+            }
+        }
+    }
+
+    &.ion-page {
+        display: flex;
+    }
+
+    .toolbar-background-md {
+        background-color: color($colors, white, base);
+    }
+
+    .header-md::after {
+        display: none;
+    }
+
+    ion-content > .scroll-content {
+        overflow: hidden;
+    }
+
+    img {
+        margin: 15px;
+    }
+
+    .segment-md {
+        display: flex;
+        align-self: stretch;
+    }
+
+    .segment-md .segment-button {
+        border: none;
+        color: color($colors, grey, base);
+
+        &.segment-activated {
+            border: none;
+        }
+    }
+
+    .segment-activated {
+        ion-icon {
+            color: color($colors, primary, base);
+        }
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-self: stretch;
+        flex: 1;
+    }
+    .slide-zoom {
+        height: inherit;
+    }
+
+    .coin-divider {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        color: color($colors, primary, base);
+
+        .horizontal-line {
+            height: 1px;
+            border-top: 1px solid;
+            display: flex;
+            flex: 1;
+        }
+
+        span {
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .earnings-divider {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        color: color($colors, primary, base);
+
+        .horizontal-line {
+            height: 1px;
+            border-top: 1px solid;
+            display: flex;
+            flex: 1;
+        }
+
+        span {
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .swiper-slide {
+        overflow: auto;
+    }
+}

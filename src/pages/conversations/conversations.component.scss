@@ -1,0 +1,158 @@
+app-conversations {
+    display: block;
+    height: 100%;
+    overflow: auto;
+
+    .scroll-content {
+        overflow: auto;
+    }
+
+    .search-wrapper {
+        left: 0;
+        z-index: 2;
+        width: 100%;
+
+        form {
+            padding: 5px;
+            background-color: color($colors, white, base);
+            border: 1px color($colors, grey, base) solid;
+            border-radius: 10px;
+            display: flex;
+            margin: 0 10%;
+
+            input {
+                display: flex;
+                flex: 1;
+                border: none;
+            }
+
+            button {
+                background-color: color($colors, white, base);
+                color: color($colors, primary, base);
+                font-size: 20px;
+            }
+        }
+    }
+
+    .conversations-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .conversation-wrapper {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        flex: 1;
+        margin: 5px 0;
+        outline: none;
+        cursor: pointer;
+        border-bottom: 1px color($colors, lightgrey, base) solid;
+        border-left: 10px color($colors, white, base) solid;
+
+        &.has-unread {
+            border-left-color: color($colors, primary, base);
+        }
+
+        &.selected {
+            background: #7f337b; /* Old browsers */
+            background: -moz-linear-gradient(left, #7f337b 0%, #e1939a 67%, #ffbaa2 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #7f337b 0%,#e1939a 67%,#ffbaa2 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #7f337b 0%,#e1939a 67%,#ffbaa2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f337b', endColorstr='#ffbaa2',GradientType=1 ); /* IE6-9 */
+
+            .content-wrapper {
+                color: color($colors, white, base);
+
+                .unread-count {
+                    color: color($colors, white, base);
+                }
+            }
+        }
+
+        .img-wrapper {
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            margin: 0 8px;
+
+            img {
+                max-height: 80px;
+                margin: 0;
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            color: color($colors, grey, base);
+            position: relative;
+
+            .name {
+                font-size: 18px;
+            }
+            .conversation-text {
+                font-size: 12px;
+            }
+
+            .unread-count {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                color: color($colors, primary, base);
+            }
+            .date {
+                position: absolute;
+                bottom: 30px;
+                right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .separator {
+        border-top: 1px color($colors, grey, base) solid;
+        height: 1px;
+        margin-left: 18px;
+    }
+
+    .buttons-fixed {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+
+        .buttons-wrapper {
+            position: relative;
+            height: 50px;
+        }
+
+        .new-conversation, .remove-conversations {
+            position: absolute;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            color: color($colors, primary, base);
+            font-size: 30px;
+            cursor: pointer;
+            outline: none;
+            overflow: hidden;
+            bottom: 10px;
+        }
+
+        .remove-conversations {
+            left: 15px;
+        }
+
+        .new-conversation {
+            right: 15px;
+        }
+    }
+}

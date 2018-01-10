@@ -1,0 +1,134 @@
+app-messages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px 150px;
+
+    .primary-text {
+        color: color($colors, primary, base);
+    }
+
+    .messages-absolute {
+        position: absolute;
+        left: 0;
+        top: 28px;
+        bottom: 85px;
+        overflow: hidden;
+        width: 100%;
+
+        .messages-wrapper {
+            position: relative;
+            overflow-y: auto;
+            height: 100%;
+        }
+    }
+
+    .message-wrapper {
+        display: flex;
+        margin: 7px;
+
+        &.mine {
+            justify-content: flex-end;
+
+            .message {
+                border: 1px color($colors, grey, base) solid;
+            }
+
+            .message:before {
+                border-top: 16px solid color($colors, grey, base);
+                border-right: 16px solid transparent;
+                top: 22px;
+                right: -16px;
+            }
+            .message:after {
+                border-top: 14px solid white;
+                border-right: 13px solid transparent;
+                top: 23px;
+                right: -13px;
+            }
+        }
+
+        .user-circle {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 40px;
+            max-width: 40px;
+            max-height: 40px;
+
+            img {
+                max-width: none;
+                max-height: 40px;
+                margin: 0;
+            }
+        }
+
+        .message {
+            max-width: 35%;
+            border-radius: 10px;
+            border: 1px color($colors, primary, base) solid;
+            padding: 10px;
+            margin: 0 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: color($colors, grey, base);
+
+            .date {
+                font-size: 12px;
+            }
+            .text {
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+        .message:before, .message:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+        &:not(.mine) {
+            .message:before {
+                border-top: 16px solid color($colors, primary, base);
+                border-left: 16px solid transparent;
+                top: 22px;
+                left: -16px;
+            }
+            .message:after {
+                border-top: 14px solid white;
+                border-left: 13px solid transparent;
+                top: 23px;
+                left: -13px;
+            }
+        }
+    }
+
+    .empty-block {
+        height: 80px;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        border-top: 1px color($colors, grey, base) solid;
+        background-color: color($colors, white, base);
+        left: 0;
+        bottom: 0;
+
+        input {
+            display: flex;
+            flex: 1;
+            border: 1px color($colors, grey, base) solid;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        button.send {
+            background-color: color($colors, white, base);
+            font-size: 30px;
+            padding-top: 5px;
+            color: color($colors, primary, base);
+        }
+    }
+}

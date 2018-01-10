@@ -1,0 +1,76 @@
+app-start {
+    &.ion-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 230px;
+        opacity: 0;
+        transition: 1s all linear;
+    }
+
+    .label {
+        margin-top: 15px;
+        color: color($colors, primary, base);
+    }
+
+    .caption {
+        color: color($colors, grey, base);
+        margin-top: 15px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: 1s all linear;
+
+        ion-select {
+            width: 150px;
+            min-width: 100%;
+            max-width: 100%;
+
+            &.select-md {
+                padding: 0 5px;
+                margin-top: 15px;
+                border-bottom: 1px color($colors, primary, base) solid;
+            }
+
+            .select-text {
+                color: color($colors, grey, base);
+                text-align: center;
+            }
+        }
+
+        ion-input {
+            border-bottom: 1px color($colors, primary, base) solid;
+
+            .text-input-md {
+                margin: 15px 0 0 0;
+            }
+        }
+
+        button.confirm {
+            margin-top: 15px;
+            color: color($colors, primary, base);
+            border: 1px color($colors, primary, base) solid;
+            border-radius: 10px;
+            background-color: #ffffff;
+            padding: 10px 80px;
+            z-index: 1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        button.is-active {
+            background-color: color($colors, primary, base);
+            color: color($colors, white, base);
+        }
+    }
+    .loaded {
+        opacity: 1;
+    }
+}

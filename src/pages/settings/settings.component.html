@@ -1,0 +1,32 @@
+<div class="main-settings">
+    <span class="primary-text">SMS Limit</span>
+    <div class="checkbox limited">
+        <div class="checkbox-wrapper">
+            <ion-checkbox [(ngModel)]="isLimited" (ionChange)="updateSettings('isLimited')"></ion-checkbox>
+            <ion-label>Limited</ion-label>
+        </div>
+        <div class="limit-input"><ion-input type="number" [(ngModel)]="limitPerMonth" [disabled]="true"></ion-input> per month</div>
+    </div>
+    <div class="checkbox">
+        <ion-checkbox [(ngModel)]="isUnlimited" (ionChange)="updateSettings('isUnlimited')"></ion-checkbox>
+        <ion-label>Unlimited</ion-label>
+    </div>
+    <span class="primary-text spaced">Est. earnings this week</span>
+    <span class="hint-text bold">0.006 BIRDs</span>
+    <span class="primary-text spaced">Est. premium earnings this week</span>
+    <span class="hint-text bold">0.006 BIRDs</span>
+    <div class="separator spaced"></div>
+    <span class="primary-text">Premium</span>
+    <div class="checkbox">
+        <ion-checkbox [(ngModel)]="isHidden" (ionChange)="updateSettings('isHidden')"></ion-checkbox>
+        <ion-label>Allow hidden messages</ion-label>
+    </div>
+</div>
+<div class="sending-status">
+    <span class="primary-text">Messaging data status:</span>
+    <div class="toggle">
+        <ion-label *ngIf="isSending" class="positive">Sending</ion-label>
+        <ion-label *ngIf="!isSending" class="negative">Not sending</ion-label>
+        <ion-toggle [(ngModel)]="isSending" (ionChange)="updateSettings('isSending')"></ion-toggle>
+    </div>
+</div>

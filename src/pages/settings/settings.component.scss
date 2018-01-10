@@ -1,0 +1,227 @@
+app-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: inherit;
+
+    .main-settings {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-items: flex-start;
+        flex: 1;
+        padding-top: 40px;
+        min-height: 400px;
+    }
+
+    .primary-text {
+        color: color($colors, grey, base);
+        font-weight: bold;
+
+        &.spaced {
+            margin-top: 10px;
+        }
+    }
+
+    .hint-text {
+        color: color($colors, primary, base);
+
+        &.bold {
+            font-weight: bold;
+        }
+    }
+
+    .limit-input {
+        color: color($colors, primary, base);
+        display: flex;
+        align-items: center;
+
+        .text-input-md {
+            width: 60px;
+            text-align: center;
+            margin: 13px 5px 13px 8px;
+            border-bottom: 1px color($colors, primary, base) solid;
+        }
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+
+        &.limited {
+            align-self: stretch;
+            justify-content: space-between;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+        }
+
+        ion-checkbox {
+            margin-right: 10px;
+
+            .checkbox-icon {
+                border-color: color($colors, primary, base);
+            }
+        }
+
+        ion-label {
+            color: color($colors, primary, base);
+        }
+    }
+
+    .separator {
+        display: flex;
+        align-self: stretch;
+        height: 1px;
+        border-bottom: 1px color($colors, grey, base) solid;
+
+        &.spaced {
+            margin: 15px 0;
+        }
+    }
+
+    .sending-status {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-items: flex-start;
+        min-height: 75px;
+    }
+
+    .settings-loading-wrapper {
+        display: flex;
+        align-self: stretch;
+        height: 10px;
+        margin: 15px 0 10px 0;
+        position: relative;
+
+        .inactive {
+            display: flex;
+            flex: 1;
+            border-top: 2px color($colors, danger, base) solid;
+            height: 1px;
+        }
+
+        .active {
+            display: flex;
+            flex: 1;
+            position: relative;
+
+            .cs-loader-inner {
+                transform: translateY(-50%);
+                width: 100%;
+                top: 50%;
+                position: absolute;
+                color: #FFF;
+                padding: 0 100px;
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .cs-loader-inner label {
+                font-size: 20px;
+                opacity: 0;
+                display: inline-block;
+                color: color($colors, primary, base);
+            }
+
+            @keyframes lol {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-300px);
+                }
+                33% {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+                66% {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(300px);
+                }
+            }
+
+            @-webkit-keyframes lol {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateX(-300px);
+                }
+                33% {
+                    opacity: 1;
+                    -webkit-transform: translateX(0px);
+                }
+                66% {
+                    opacity: 1;
+                    -webkit-transform: translateX(0px);
+                }
+                100% {
+                    opacity: 0;
+                    -webkit-transform: translateX(300px);
+                }
+            }
+
+            .cs-loader-inner label:nth-child(6) {
+                -webkit-animation: lol 3s infinite ease-in-out;
+                animation: lol 3s infinite ease-in-out;
+            }
+
+            .cs-loader-inner label:nth-child(5) {
+                -webkit-animation: lol 3s 100ms infinite ease-in-out;
+                animation: lol 3s 100ms infinite ease-in-out;
+            }
+
+            .cs-loader-inner label:nth-child(4) {
+                -webkit-animation: lol 3s 200ms infinite ease-in-out;
+                animation: lol 3s 200ms infinite ease-in-out;
+            }
+
+            .cs-loader-inner label:nth-child(3) {
+                -webkit-animation: lol 3s 300ms infinite ease-in-out;
+                animation: lol 3s 300ms infinite ease-in-out;
+            }
+
+            .cs-loader-inner label:nth-child(2) {
+                -webkit-animation: lol 3s 400ms infinite ease-in-out;
+                animation: lol 3s 400ms infinite ease-in-out;
+            }
+
+            .cs-loader-inner label:nth-child(1) {
+                -webkit-animation: lol 3s 500ms infinite ease-in-out;
+                animation: lol 3s 500ms infinite ease-in-out;
+            }
+        }
+    }
+
+    .toggle {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+
+        .toggle-icon {
+            background-color: color($colors, lightdanger, base);
+        }
+
+        ion-toggle:not(.toggle-checked) .toggle-inner {
+            background-color: color($colors, danger, base);
+        }
+
+        ion-label {
+            width: 100px;
+            text-align: left;
+
+            &.positive {
+                color: color($colors, primary, base);
+            }
+            &.negative {
+                color: color($colors, danger, base);
+            }
+        }
+    }
+}

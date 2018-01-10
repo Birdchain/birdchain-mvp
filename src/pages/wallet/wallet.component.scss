@@ -1,0 +1,93 @@
+app-wallet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: #ffcfbf; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffcfbf 1%, #d39fa0 43%, #410239 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffcfbf 1%,#d39fa0 43%,#410239 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffcfbf 1%,#d39fa0 43%,#410239 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcfbf', endColorstr='#410239',GradientType=0 ); /* IE6-9 */
+    height: 100%;
+    padding: 0 3%;
+    position: relative;
+
+    canvas {
+        max-width: 1300px;
+        margin-top: 50px;
+    }
+
+    .info-block {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            color: color($colors, primary, base);
+        }
+
+        .info-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-top: 30px;
+
+            .coins-amount {
+                color: color($colors, white, base);
+                font-size: 60px;
+            }
+            .coins-text {
+                font-size: 30px;
+            }
+            .sms-amount {
+                color: color($colors, primary, base);
+                font-size: 40px;
+            }
+            .sms-text {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .app-block {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-items: flex-start;
+        border-left: 1px color($colors, white, base) solid;
+        margin: 28px 18px;
+
+        span {
+            margin: 5px 0;
+        }
+
+        .title {
+            color: color($colors, white, base);
+            font-weight: bold;
+        }
+        .subtitle {
+            color: color($colors, grey, base);
+            font-size: 14px;
+        }
+        .app-id {
+            color: color($colors, white, base);
+            font-size: 16px;
+            word-break: break-all;
+            text-align: left;
+        }
+    }
+
+    button.statistics {
+        background-color: color($colors, white, base);
+        border-radius: 10px;
+        border: 1px color($colors, primary, base) solid;
+        color: color($colors, primary, base);
+        padding: 10px 30px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

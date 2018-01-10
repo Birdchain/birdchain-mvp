@@ -1,0 +1,119 @@
+app-intro {
+    background-color: color($colors, white, base);
+
+    ion-slide {
+        &.padding {
+            padding: 20px 20px 30px 20px;
+        }
+
+        .slide-zoom {
+            height: 100%;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: left;
+            overflow: hidden;
+
+            &.border {
+                border: 1px color($colors, primary, base) solid;
+                border-radius: 20px;
+            }
+
+            &.spaced {
+                justify-content: space-between;
+            }
+
+            .text-block {
+                display: flex;
+                flex-direction: column;
+                padding: 0 20px;
+
+                &.spaced {
+                    padding-top: 30px;
+                    justify-content: space-between;
+                    height: 60%;
+                }
+            }
+
+            .title {
+                color: color($colors, primary, base);
+                font-size: 40px;
+                margin: 30px 0 10px;
+            }
+            .text {
+                margin: 8px 0;
+                color: color($colors, grey, base);
+            }
+            .highlight {
+                color: color($colors, primary, base);
+
+                &.spaced {
+                    font-weight: bold;
+                }
+            }
+            svg {
+                stroke: color($colors, primary, base);
+                fill: none;
+                display: flex;
+                align-self: center;
+                width: 130px;
+                margin-top: 20px;
+            }
+            button {
+                display: flex;
+                align-self: center;
+                color: color($colors, primary, base);
+                border: 1px color($colors, primary, base) solid;
+                border-radius: 20px;
+                background-color: color($colors, white, base);
+                padding: 10px 50px;
+                font-size: 20px;
+                margin-bottom: 50px;
+                font-weight: bold;
+            }
+            button:hover {
+                background-color: color($colors, primary, base);
+                color: color($colors, white, base);
+            }
+            .gradient-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #ffcfbf; /* Old browsers */
+                background: -moz-linear-gradient(top, #ffcfbf 1%, #d39fa0 43%, #410239 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #ffcfbf 1%,#d39fa0 43%,#410239 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #ffcfbf 1%,#d39fa0 43%,#410239 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcfbf', endColorstr='#410239',GradientType=0 ); /* IE6-9 */
+                height: 40%;
+
+                .logo {
+                    max-width: 140px;
+                }
+                .promo {
+                    max-width: 160px;
+                    margin-top: 30px;
+                }
+            }
+            .separator {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+            }
+        }
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border: 1px color($colors, primary, base) solid;
+        background-color: color($colors, white, base);
+        opacity: .8;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: color($colors, primary, base);
+        opacity: 1;
+    }
+}

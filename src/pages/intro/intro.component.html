@@ -1,0 +1,44 @@
+<ion-slides pager="true">
+    <ion-slide class="padding">
+        <div class="content border spaced">
+            <div class="text-block">
+                <span class="title">Welcome!</span>
+                <span class="text">This is a <span class="highlight">simulation app</span>.</span>
+                <span class="text">This app is for demonstration purposes only. <span class="highlight">It will not send or receive</span> any messages, neither instant, nor SMS.</span>
+                <span class="text">Working Birdchain app is expected to be launched on <span class="highlight">July 2018</span>.</span>
+                <span class="text">Design and portrayed features of Birdchain app are <span class="highlight">not final</span> and will change.</span>
+            </div>
+            <button (click)="switchSlide(1)">Continue</button>
+        </div>
+    </ion-slide>
+    <ion-slide class="padding">
+        <div class="content border spaced">
+            <div class="text-block">
+                <span class="title">Intro</span>
+                <span class="text"><span class="highlight">Birdchain</span> is an instant messaging app that will allow it's users to sell their <span class="highlight">unused SMS</span> messages.</span>
+                <span class="text">For every sold SMS app user will be rewarded with cryptocurrency which can be sold in cryptocurrency exchange.</span>
+                <svg id="icon-phone" class="svg-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.35 151.5"><title>icon-phone</title><line id="phone-screen" class="cls-2" x1="33.32" y1="16.5" x2="103.25" y2="16.5"></line><ellipse id="phone-camera" class="cls-2" cx="53.36" cy="9.01" rx="2.27" ry="2.28"></ellipse><ellipse id="phone-button" class="cls-2" cx="68.28" cy="143.03" rx="3.46" ry="3.48"></ellipse><rect id="phone-speaker" class="cls-2" x="63.64" y="6.73" width="25.7" height="4.56" rx="2.27" ry="2.27"></rect><path id="phone-line2" class="cls-1" d="M130.75,94a9,9,0,0,0-9,9V205.7H105.08a9.53,9.53,0,0,1-9.51-9.54V160a9.53,9.53,0,0,1,9.51-9.54h80a9.53,9.53,0,0,1,9.51,9.54V205.7h-6.81l4.95,10.16a1.43,1.43,0,0,1-1.93,1.89L167.17,205.7H141" transform="translate(-94.83 -93.25)"></path><path id="phone-line1" class="cls-1" d="M187.74,228H121.79v7a9,9,0,0,0,9,9h64.73a9,9,0,0,0,9-9V103a9,9,0,0,0-9-9H130.75" transform="translate(-94.83 -93.25)"></path></svg>
+            </div>
+            <button (click)="switchSlide(2)">Continue</button>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="content">
+            <div class="gradient-block">
+                <img src="assets/images/birdchain-white.png" class="logo" alt="Logo"/>
+                <img src="assets/images/promo-text.png" class="promo" alt="Promo"/>
+            </div>
+            <div class="text-block spaced">
+                <div class="text-content">
+                    <span class="text">Funds raised during ICO will be used for Birdchain app development.</span>
+                    <div class="separator">
+                        <span class="highlight spaced">ICO STARTS</span>
+                        <span class="highlight spaced">NOVEMBER 18, 2017 15:00:00 GMT</span>
+                    </div>
+                    <span class="text">Visit <a class="highlight" onclick="window.open('https://www.birdchain.io', '_system', 'location=yes'); return false;">www.birdchain.io</a></span>
+                </div>
+                <button (click)="openApp()">Open simulation</button>
+            </div>
+        </div>
+    </ion-slide>
+</ion-slides>

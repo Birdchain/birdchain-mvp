@@ -1,0 +1,24 @@
+<span class="primary-text">{{conversation.user.nickName}}</span>
+<div class="messages-absolute">
+    <div class="messages-wrapper">
+        <div *ngFor="let message of messages" class="message-wrapper" [ngClass]="{'mine': message.sender.id === currUser.id}">
+            <div *ngIf="message.sender.id !== currUser.id" class="user-circle">
+                <img src="assets/images/{{message.sender.id}}.jpg" alt="Photo"/>
+            </div>
+            <div class="message">
+                <span class="date">{{message.dateSent}}</span>
+                <span class="text">{{message.text}}</span>
+            </div>
+            <div *ngIf="message.sender.id === currUser.id" class="user-circle">
+                <img src="assets/images/{{currUser.id}}.jpg" alt="Photo"/>
+            </div>
+        </div>
+        <div class="empty-block"></div>
+    </div>
+</div>
+<form [formGroup]="form" (ngSubmit)="sendMessage()" ion-fixed>
+    <input formControlName="text"/>
+    <button class="send">
+        <ion-icon name="send"></ion-icon>
+    </button>
+</form>

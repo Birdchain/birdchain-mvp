@@ -1,0 +1,35 @@
+<ion-header [ngClass]="{'wallet': slide === 1}">
+    <ion-toolbar>
+        <div class="segment-md">
+            <button (click)="switchSlide(0)" class="segment-button" [ngClass]="{'segment-activated': slide === 0}">
+                <ion-icon name="chatboxes"></ion-icon>
+            </button>
+            <button (click)="switchSlide(1)" class="segment-button" [ngClass]="{'segment-activated': slide === 1}">
+                <ion-icon name="card"></ion-icon>
+            </button>
+            <button (click)="switchSlide(2)" class="segment-button" [ngClass]="{'segment-activated': slide === 2}">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </div>
+    </ion-toolbar>
+    <div class="coin-divider">
+        <div class="horizontal-line"></div>
+        <span>{{balance}} BIRDs</span>
+        <div class="horizontal-line"></div>
+    </div>
+</ion-header>
+
+<ion-content>
+    <ion-slides class="content-wrapper" (ionSlideDidChange)="onSlideChanged()">
+        <ion-slide>
+            <app-conversations [isMessagesOpened]="isMessagesOpened"
+                               (onWindowChange)="onWindowChanged($event)"></app-conversations>
+        </ion-slide>
+        <ion-slide>
+            <app-wallet [balance]="balance"></app-wallet>
+        </ion-slide>
+        <ion-slide>
+            <app-settings></app-settings>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
