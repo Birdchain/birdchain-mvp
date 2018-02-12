@@ -3,7 +3,7 @@ Birdchain is a decentralized application (Dapp) similar to instant messenger. Th
 
 This MVP simulates passive earning from selling unused SMS. Other features will be added soon: content engagement, personal data marketplace and in-app mini games.
 
-[DEMO](https://github.com/Birdchain/birdchain-mvp/raw/master/birdchain.apk)
+[Download Birdchain MVP](https://github.com/Birdchain/birdchain-mvp/raw/master/birdchain.apk)
 
 ## Copyright
 Users are free to download and use this mobile app for informational, educational and research purposes only. All rights reserved. May not be used or reproduced without permission by owners.
